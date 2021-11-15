@@ -11,7 +11,6 @@ const selectedItems = document.querySelector("#selectedItems");
 
 let count = 1;
 addButton.addEventListener("click", function () {
-	console.log("ADD has been clicked");
 	const newItem = document.createElement("div");
 	newItem.classList.add("listItem");
 	newItem.classList.add(`list-item${count}`);
@@ -32,7 +31,6 @@ removeButton.addEventListener("click", function () {
 	console.log("Remove has been clicked");
 	const removeItem = document.querySelectorAll(".completed");
 	for (const item of removeItem) {
-		console.log("I should be doing things!");
 		item.style.textDecoration = "none";
 		item.style.background = "plum";
 		item.classList.remove('completed');
@@ -44,8 +42,6 @@ removeAllButton.addEventListener("click", function () {
 	console.log("Remove ALL has been clicked");
 		const removeAllItem = document.querySelectorAll(".listItem");
 	for (const item of removeAllItem) {
-		console.log("I should be doing things!");
-		// item.classList.add('completed');
 		item.style.textDecoration = "none";
 		item.style.background = "plum";
 		hiddenListItems.appendChild(item);
@@ -53,13 +49,11 @@ removeAllButton.addEventListener("click", function () {
 });
 
 deletedItemsButton.addEventListener("click", function () {
-	console.log("Show Deleted has been clicked");
 	hiddenList.style.display = "flex";
 	item.style.display = "none";
 });
 
 mainListButton.addEventListener("click", function () {
-	console.log("Main List has been clicked");
 	hiddenList.style.display = "none";
 	newListItem.style.display = "flex";
 });
